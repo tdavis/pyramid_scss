@@ -20,3 +20,9 @@ Change Log
 
 - Fixed `issue #3 <https://github.com/jessedhillon/pyramid_scss/issues/3>`_: caching implementation was incomplete/incorrect.
 - Added ``static_path`` configuration for indicating location of static assets.
+
+0.2.2
+-----
+*30 Jan 2013*
+
+- Complete upload of code that actually fixes `issue #3 <https://github.com/jessedhillon/pyramid_scss/issues/3>`_.
