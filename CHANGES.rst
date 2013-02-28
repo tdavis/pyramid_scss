@@ -26,3 +26,10 @@ Change Log
 *30 Jan 2013*
 
 - Complete upload of code that actually fixes `issue #3 <https://github.com/jessedhillon/pyramid_scss/issues/3>`_.
+
+0.3.0
+-----
+*28 Feb 2013*
+
+- Support pyScss 1.1.5 (code move)
+- Fix broken renderer tests (\n issues)

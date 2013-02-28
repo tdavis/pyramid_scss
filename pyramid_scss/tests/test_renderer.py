@@ -13,7 +13,7 @@ class RendererTestCase(PyramidScssTestCase):
         })
 
         rendered = self.renderer(self.fixtures.get('test.scss'), {'request': request})
-        assert rendered == self.fixtures.get('test_nocompress.css')
+        self.assertEqual(rendered, self.fixtures.get('test_nocompress.css'))
 
     def test_compress(self):
         self.renderer.options.update({

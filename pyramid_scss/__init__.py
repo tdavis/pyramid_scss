@@ -1,15 +1,17 @@
-import os
 import logging
 
 from zope.interface import implements
-from zope.interface import Interface
 
 from pyramid.interfaces import ITemplateRenderer
 from pyramid.exceptions import ConfigurationError
 from pyramid.resource import abspath_from_asset_spec
 
-import scss
+try:
+    from scss import config as scss_config
+except ImportError:
+    import scss as scss_config
 from scss import Scss
+
 
 Logger = logging.getLogger('pyramid_scss')
 
@@ -85,6 +87,6 @@ class ScssRenderer(object):
 
 def includeme(config):
     load_paths, static_path = _get_import_paths(config.registry.settings)
-    scss.LOAD_PATHS = ','.join([scss.LOAD_PATHS, ','.join(load_paths)])
-    scss.STATIC_ROOT = static_path
+    scss_config.LOAD_PATHS = ','.join([scss_config.LOAD_PATHS, ','.join(load_paths)])
+    scss_config.STATIC_ROOT = static_path
     config.add_renderer('scss', renderer_factory)

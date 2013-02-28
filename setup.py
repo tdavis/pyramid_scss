@@ -1,5 +1,4 @@
 import os
-import sys
 
 from setuptools import setup, find_packages
 
@@ -15,7 +14,7 @@ requires = [
 
 setup(
     name='pyramid_scss2',
-    version='0.2.2',
+    version='0.3.0',
     description="Adds support for SCSS to Pyramid projects",
     long_description="{0}\n\n{1}".format(readme, changes),
     classifiers=[
